@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="member">
+	<insert id="join" parameterType="MemberDTO">
+		insert into tbl_member
+		(member_id, member_password, member_name, member_nickname,
+		member_birth, member_gender, member_phone_number, member_email,
+		member_ask, member_answer, member_status, member_address,
+		member_address_detail, member_zone_code)
+		values(#{memberId},
+		#{memberPassword}, #{memberName}, #{memberNickname}, #{memberBirth},
+		#{memberGender}, #{memberPhoneNumber}, #{memberEmail}, #{memberAsk},
+		#{memberAnswer},
+		#{memberStatus}, #{memberAddress}, #{memberAddressDetail}, #{memberZoneCode})
+
+	</insert>
+
+</mapper>

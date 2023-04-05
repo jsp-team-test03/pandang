@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="basket">
+	
+	<select id="selectAll" resultType="BasketVO" parameterType="map">
+	select store_file_original_name,
+	ts.store_title , ts.store_price 
+	from tbl_store ts join tbl_store_file tsf 
+	on ts.store_number = tsf.store_number 
+	order by ts.store_number desc
+	</select>
+	
+	
+	
+</mapper>
